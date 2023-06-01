@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Stripe from 'stripe'
 
 export async function getServerSideProps(context) {
-  const stripe = new Stripe(process.env.STRIPE_SECRET ?? '', 
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', 
   {apiVersion: '2020-08-27'})
 
   const res = await stripe.prices.list({
@@ -11,9 +11,14 @@ export async function getServerSideProps(context) {
     expand: ['data.product']
   })
 
-  
+  const prices = res.data.filter(price => price.active)
+
+  return {
+    props: { prices }
+  }
 }
-export default function Home() {
+export default function Home({prices}) {
+  console.log(prices)
   return (
     <>
       <Head>
@@ -22,8 +27,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-      </main>
     </>
   )
 }
