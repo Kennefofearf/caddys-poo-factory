@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Stripe from 'stripe'
 
+/* Create asyncronous function */
+
 export async function getServerSideProps(context) {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', 
   {apiVersion: '2020-08-27'})
