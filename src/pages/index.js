@@ -19,6 +19,9 @@ export async function getServerSideProps(context) {
     props: { prices }
   }
 }
+
+/* Products listed on Home screen */
+
 export default function Home({prices}) {
   console.log(prices)
   return (
