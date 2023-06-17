@@ -34,6 +34,9 @@ export default function Home({prices}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {prices.map((price, index) => {
+        return <div key={index}>{price.product.name}</div>
+      })}
     </>
   )
 }
