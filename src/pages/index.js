@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { Router } from 'next/router'
 import Stripe from 'stripe'
 
 /* Create asyncronous function */
@@ -25,6 +26,21 @@ export async function getServerSideProps(context) {
 /* Products listed on Home screen */
 
 export default function Home({prices}) {
+  async function checkout() {
+    const lineItems = {
+      price: prices[0].product.id,
+      quantity: 1
+    }
+
+    const res = await fetch('api/checkout', {
+      method: 'POST',
+      body: JSON.stringify({lineItems})
+    })
+
+    const data = await res.json(
+    Router.push(data.session.url())
+    )
+  }
   console.log(prices)
   return (
     <>
