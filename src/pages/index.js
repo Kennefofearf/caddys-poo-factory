@@ -13,6 +13,8 @@ export async function getServerSideProps(context) {
     expand: ['data.product']
   })
 
+  /* Set the price variable */
+
   const prices = res.data.filter(price => price.active)
 
   return {
