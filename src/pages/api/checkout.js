@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       apiVersion: '2023-05-31'
     })
 
-    const session = await stripe.checkout.session.create({
+    const session = await stripe.checkout.sessions.create({
       success_url: 'http://localhost:3000/success',
       cancel_url: 'http://localhost:3000/cancel',
       lineItems: body.lineItems,

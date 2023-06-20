@@ -28,7 +28,7 @@ export async function getServerSideProps(context) {
 export default function Home({prices}) {
   async function checkout() {
     const lineItems = {
-      price: prices[0].product.id,
+      price: prices[0].id,
       quantity: 1
     }
 
@@ -37,9 +37,8 @@ export default function Home({prices}) {
       body: JSON.stringify({lineItems})
     })
 
-    const data = await res.json(
+    const data = await res.json()
     Router.push(data.session.url())
-    )
   }
   console.log(prices)
   return (
@@ -51,7 +50,7 @@ export default function Home({prices}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {prices.map((price, index) => {
-        return <div key={index}>{price.product.name}</div>
+        return <div className='cursor-pointer' key={index} onClick={checkout}>{price.product.name}</div>
       })}
     </>
   )
