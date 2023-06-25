@@ -3,10 +3,10 @@
 import Stripe from "stripe"
 
 export default async function handler(req, res) {
-  if {req.method !== 'POST'} {return res.status(405).json({message: 'POST method required'})}
+  if (req.method !== 'POST') {return res.status(405).json({message: 'POST method required'})}
   const body = JSON.parse(req.body)
 
-  if {body.lineItems.length === 0} {return res.status(405).json(message: 'No items for selected.')}
+  if (body.lineItems.length === 0) {return res.status(405).json({message: 'No items for selected.'})}
 
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {
