@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
   try {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {
-      apiVersion: '2023-05-31'
+      apiVersion: '2020-08-27'
     })
 
     /* Creates "success" and "cancel" URLs */
@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     const session = await stripe.checkout.sessions.create({
       success_url: 'http://localhost:3000/success',
       cancel_url: 'http://localhost:3000/cancel',
-      lineItems: body.lineItems,
+      line_Items: body.lineItems,
       mode: 'payment'
     })
 
