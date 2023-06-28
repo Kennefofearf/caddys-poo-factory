@@ -38,7 +38,9 @@ export default function Home({prices}) {
     })
 
     const data = await res.json()
-    //Router.push(data.session.url)
+    console.log(lineItems)
+    console.log(data)
+    Router.push(data.session.url)
   }
   console.log(prices)
   return (
