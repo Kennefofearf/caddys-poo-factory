@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     const session = await stripe.checkout.sessions.create({
       success_url: 'http://localhost:3000/success',
       cancel_url: 'http://localhost:3000/cancel',
-      line_Items: body.lineItems,
+      line_items: body.lineItems,
       mode: 'payment'
     })
 
