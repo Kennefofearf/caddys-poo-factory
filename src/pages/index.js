@@ -53,7 +53,7 @@ export default function Home({prices}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {prices.map((price, index) => {
-        return <div key={index}>{price.product.name}</div>
+        return <div className="product" key={index}>{price.product.name}</div>
       })}
       <button onClick={checkout}>Checkout</button>
     </div>
