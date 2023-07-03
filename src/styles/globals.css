@@ -16,6 +16,15 @@
     font-size: 30px;
 }
 
-.product {
+.productContainer {
     text-align: center;
+    padding: 250px;
+}
+
+.backgroundContainer {
+    background-color: antiquewhite;
+}
+
+.pooImage {
+    width: 150px;
 }
