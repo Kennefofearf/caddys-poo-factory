@@ -44,6 +44,9 @@ export default function Home({prices}) {
   }
 
   return (
+
+    /* Create containers */
+
     <div className='backgroundContainer'>
       <div className='header'><h2>Caddy's Poo Factory</h2></div>
       <Head>
