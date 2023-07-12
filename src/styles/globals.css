@@ -16,6 +16,12 @@
     font-size: 30px;
 }
 
+.pooDescription {
+    text-align: center;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
 .productContainer {
     text-align: center;
     padding: 250px;

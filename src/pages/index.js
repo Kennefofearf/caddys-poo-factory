@@ -55,12 +55,17 @@ export default function Home({prices}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <p className='pooDescription'>
+        All of the manure sold here is fresh from Caddy's inner factory.
+        Using a recipe of Timothy Hay and pellets she creates only the highest quality manure
+        or snack food for your dog!
+      </p>
       <div className='productContainer'>
-      <img className='pooImage' src='https://www.tdfertilizermachinery.com/wp-content/uploads/2019/04/Organic-Fertilizer-Granules-2.jpg'/>
-      {prices.map((price, index) => {
+        <img className='pooImage' src='https://www.tdfertilizermachinery.com/wp-content/uploads/2019/04/Organic-Fertilizer-Granules-2.jpg'/>
+        {prices.map((price, index) => {
         return <div className="product" key={index}>{price.product.name}</div>
-      })}
-      <button onClick={checkout}>Checkout</button>
+        })}
+        <button onClick={checkout}>Checkout</button>
       </div>
     </div>
   )
