@@ -2,6 +2,8 @@
 
 import Stripe from "stripe"
 
+/* Sets up Async function */
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {return res.status(405).json({message: 'POST method required'})}
   const body = JSON.parse(req.body)
