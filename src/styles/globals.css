@@ -14,6 +14,7 @@
     background: #d5d8b2;
     color: black;
     font-size: 30px;
+    height: 100px;
 }
 
 .pooDescription {
@@ -32,6 +33,11 @@
     background-color: antiquewhite;
 }
 
+.logo {
+    margin-left: -800px;
+}
+
 .pooImage {
     width: 150px;
 }
+
