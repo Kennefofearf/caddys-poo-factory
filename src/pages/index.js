@@ -50,6 +50,7 @@ export default function Home({prices}) {
 
     <div className='backgroundContainer'>
     <div className='bannerContainer'>
+      {/* Add the logo */}
       <div className='header'><Image className="logo" 
         src={logo}
         width={50} 
