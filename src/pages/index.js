@@ -54,7 +54,7 @@ export default function Home({prices}) {
       <div className='header'><Image className="logo" 
         src={logo}
         width={50} 
-        /><h2>
+        /><h2 className='h2'>
         Caddy's Poo Factory
         </h2>
       </div>

@@ -17,6 +17,10 @@
     height: 100px;
 }
 
+.h2 {
+    margin-top: -80px;
+}
+
 .pooDescription {
     text-align: center;
     margin-top: 80px;
@@ -35,6 +39,7 @@
 
 .logo {
     margin-left: -800px;
+    
 }
 
 .pooImage {
