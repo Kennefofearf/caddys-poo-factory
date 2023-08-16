@@ -71,6 +71,7 @@ export default function Home({prices}) {
         Using a recipe of Timothy Hay and pellets she creates only the highest quality manure
         or snack food for your dog!
       </p>
+      {/* Continer that holds the product picture, link and description. */}
       <div className='productContainer'>
         <img className='pooImage' src='https://www.tdfertilizermachinery.com/wp-content/uploads/2019/04/Organic-Fertilizer-Granules-2.jpg'/>
         {prices.map((price, index) => {
