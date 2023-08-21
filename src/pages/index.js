@@ -65,7 +65,7 @@ export default function Home({prices}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* Description of the store. */}
+      {/* Description of the product. */}
       <p className='pooDescription'>
         All of the manure sold here is fresh from Caddy's inner factory.
         Using a recipe of Timothy Hay and pellets she creates only the highest quality manure
