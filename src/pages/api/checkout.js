@@ -24,6 +24,8 @@ export default async function handler(req, res) {
       mode: 'payment'
     })
 
+    /* Initiates session or catches and throws an error */
+
     res.status(201).json({session})
   } catch (err) {
     res.status(500).send({message: err.message})
