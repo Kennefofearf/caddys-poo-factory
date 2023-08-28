@@ -11,6 +11,9 @@ export default async function handler(req, res) {
   if (body.lineItems.length === 0) {return res.status(405).json({message: 'No items for selected.'})}
 
   try {
+
+    /* Uses secret API Key defined in .env.local */
+
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {
       apiVersion: '2020-08-27'
     })
