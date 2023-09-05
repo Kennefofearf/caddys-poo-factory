@@ -77,6 +77,9 @@ export default function Home({prices}) {
         {prices.map((price, index) => {
         return <div className="product" key={index}>{price.product.name}</div>
         })}
+
+        {/* Checkout button brings up the Stripe payment window. */}
+
         <button onClick={checkout}>Checkout</button>
       </div>
     </div>
