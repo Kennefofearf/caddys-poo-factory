@@ -68,7 +68,7 @@ export default function Home({prices}) {
       {/* Description of the product. */}
       <p className='pooDescription'>
         All of the manure sold here is fresh from Caddy's inner factory.
-        Using a recipe of Timothy Hay and pellets she creates only the highest quality manure
+        Using a recipe of Timothy Hay and pellets she creates only the highest quality manure for your garden/farm
         or snack food for your dog!
       </p>
       {/* Continer that holds the product picture, link and description. */}
